@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+      <title>Test tool</title>
+      <link rel="stylesheet" type="text/css" href="https://raw.githack.com/SNS-Southern/Zoho/master/semantic.min.order.delivery.address.css">
+      <script src="https://raw.githack.com/SNS-Southern/Zoho/master/jquery-3.3.1.order.delivery.address.js"></script>
+      <script src="https://raw.githack.com/SNS-Southern/Zoho/master/semantic.min.order.delivery.address.js"></script>
+      <script src="https://raw.githack.com/SNS-Southern/Zoho/master/handlebars-v4.0.12.order.delivery.address.js"></script>
+      <script src="https://raw.githack.com/SNS-Southern/Zoho/master/ZohoEmbededAppSDK.min.order.delivery.address.js"></script>
+      <script src="https://raw.githack.com/SNS-Southern/Zoho/master/custom.order.delivery.address.js"></script>
+  </head>
+  <body>
+ <div class="main-container">
+ <table class="ui celled table" id="table-container">
+
+</table>
+     
+     <div class="btn-div" style="margin-left:10px;">
+     <button class="ui primary button"  onclick="associateaddress();">
+  Associate
+</button>
+<button class="ui button" onclick="closewidget();">
+  Discard
+</button>
+     </div>
+     </div>
+      <script id="address-template" type="text/x-handlebars-template">
+  <thead>
+    <tr>
+    <th>Name</th>
+    <th>Account Name</th>
+  </tr></thead>
+<tbody>
+    {{#each data}}
+    <tr>
+   <td data-label="Name">
+  <div class="ui radio checkbox">
+  <input type="radio" name="radio" checked="checked" id="{{id}}" data-value="{{Name}}">
+  <label>{{Name}}</label>
+</div>
+    </td>
+      <td>{{Customer.name}}</td>
+    </tr>
+    {{/each}}
+    </tbody>
+    </script>
+  </body>
+</html>
